@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container" id="main">
+			<h1>Comments Challenge</h1>
+			<form action="" id="commentForm">
+				<textarea
+					name="comment"
+					id=""
+					cols="30"
+					rows="10"
+					placeholder="Add your comment here."
+				></textarea>
+				<button type="submit">Submit</button>
+			</form>
+
+			<div class="comments" id="commentsContainer"></div>
+		</div>
+
+		<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+		<script src="apiKeys.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
