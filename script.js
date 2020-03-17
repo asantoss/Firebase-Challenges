@@ -21,6 +21,8 @@ commentForm.addEventListener('submit', function(event) {
 			// *** We receive the refrence to the document as the parameter of our callback that runs after the promise is resolved.
 			// When this function is ran it means our document was succesfully added to our databse
 			console.log(`Your document was created! Here is the ID: ${doc.id}`);
+			// We will also run the loadComments function to make sure our new document is added to the HTML.
+			loadComments();
 		});
 });
 
