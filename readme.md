@@ -1,5 +1,23 @@
 # Firebase challenges
 
+To get started with this repository please make sure you create a apiKeys.js and add your firebaseConfig to it.
+
+```
+var firebaseConfig = {
+	apiKey: 'xxxxxxxxxxxxxxxxx',
+	authDomain: 'xxxxxxxxxxxxxxxxxxxx',
+	databaseURL: 'xxxxxxxxxxxx',
+	projectId: 'xxxxxxxxxxxxxxx',
+	storageBucket: 'xxxxxxxxxxxxxxxxxxxx',
+	messagingSenderId: 'xxxxxxxxxxxx',
+	appId: 'xxxxxxxxxxxxxxx'
+};
+
+var googleKey = 'XXXXXXXXXXXXXXXXXXX'
+
+
+```
+
 ## Google Maps Javascript API
 
 This challenge will have you implement a custom Google Maps component. Your task is to use Google Maps' Javascript API to display a map of the Southeast United States with pins on the map for the capitol cities of each state. There should be a toggle button that hides/shows these pins on the map.
