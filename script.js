@@ -40,7 +40,13 @@ function loadComments() {
 			var commentsHTML = [];
 			docs.forEach(function(doc) {
 				var commentData = doc.data();
-				var commentHTML = `<div class="comment">${commentData.body}</div>`;
+				//As part of each comment HTML  we are adding a button
+				//Of which the onclick calls our deleteComment function
+				// With the argument being the ID of the current document.
+				var commentHTML = `<div class="comment">
+                ${commentData.body}
+                <button onclick="deleteComment('${doc.id}')">X</button>
+                </div>`;
 				// In this line we are pushing individual comments to the array we created up top.
 				commentsHTML.push(commentHTML);
 			});
@@ -57,3 +63,20 @@ function loadComments() {
 
 //We invoke our loadComments function to get all the comments when we first load the page.
 loadComments();
+
+//For our final commit we are creating a deleteComment function that takes the id of a document and deletes it from our database.
+//This function also needs to run loadComments function because we need to update our HTML.
+
+function deleteComment(docId) {
+	// This time we run the doc() method using the id we passed down as a parameter to specify which document we want to target.
+	// Once we have that document targeted we run the delete() method which returns a promise, that is resolved if our document is actually
+	// Deleted
+	db.collection('comments')
+		.doc(docId)
+		.delete()
+		.then(function() {
+			console.log('Document was deleted');
+			// This is where we want to invoke our loadComments function to update our HTML.
+			loadComments();
+		});
+}
