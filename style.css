@@ -1,0 +1,11 @@
+#map {
+	height: 400px;
+	width: 50%;
+	margin: auto;
+}
+body {
+	text-align: center;
+}
+.buttons {
+	margin: 1em;
+}

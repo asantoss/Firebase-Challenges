@@ -4,27 +4,29 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="container" id="main">
-			<h1>Comments Challenge</h1>
-			<form action="" id="commentForm">
-				<textarea
-					name="comment"
-					id=""
-					cols="30"
-					rows="10"
-					placeholder="Add your comment here."
-				></textarea>
-				<button type="submit">Submit</button>
-			</form>
-
-			<div class="comments" id="commentsContainer"></div>
+		<h3>My Google Maps Demo</h3>
+		<div class="buttons">
+			<button id="markerToggle">
+				Show Markers
+			</button>
 		</div>
+		<!-- We are adding a div with an id of map to target it and place our google map on it.-->
+		<!-- Source https://developers.google.com/maps/documentation/javascript/tutorial#Map_DOM_Elements -->
+		<div id="map"></div>
 
-		<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+		<!-- We are loading the script given to us by google -->
+
+		<!--Source:  https://developers.google.com/maps/documentation/javascript/tutorial#Loading_the_Maps_API -->
+		<!-- Please checkout the link inside of the script src attribute, it is pointing to a callback function it will use once the script is loaded -->
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0VFa1M5EfYbvYNH7cPQTR8dHShQvAqUc&callback=initMap"
+			async
+			defer
+		></script>
 		<script src="apiKeys.js"></script>
-		<script src="script.js"></script>
+		<script defer src="script.js"></script>
 	</body>
 </html>
